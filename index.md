@@ -1,4 +1,5 @@
-## Welcome to GitHub Pages
+# Defense Against The Dark Arts
+## Dylan Drudge
 
 You can use the [editor on GitHub](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
