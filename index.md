@@ -10,4 +10,4 @@
 - [Week 8](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
 - [Week 9](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
 
-#### Createdby :Dylan Drudge using GithubPages and Jekyll
+#### Created by: Dylan Drudge using GithubPages and Jekyll
