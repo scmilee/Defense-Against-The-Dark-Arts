@@ -1,4 +1,5 @@
-# Weekly Write Ups
+
+## Weekly Write Ups
 
 - [Week 1](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
 - [Week 2](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
