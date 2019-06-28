@@ -1,7 +1,8 @@
+# Defense Against The Dark Arts
 
 ## Weekly Write Ups
 
-- [Week 1](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
+- <a href="/week1.md" class="btn">Week 1</a>
 - [Week 2](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
 - [Week 3](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
 - [Week 4](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
