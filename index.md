@@ -2,14 +2,14 @@
 
 ## Weekly Write Ups
 
-- <button href="/Defense-Against-The-Dark-Arts/week1.html" >Week 1</button>
-- [Week 2](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
-- [Week 3](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
-- [Week 4](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
-- [Week 5](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
-- [Week 6](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
-- [Week 7](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
-- [Week 8](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
-- [Week 9](https://github.com/scmilee/Defense-Against-The-Dark-Arts/edit/master/index.md)
+[Week 1](/Defense-Against-The-Dark-Arts/week1.html)
+[Week 2](/Defense-Against-The-Dark-Arts/week2.html)
+[Week 3](/Defense-Against-The-Dark-Arts/week3.html)
+[Week 4](/Defense-Against-The-Dark-Arts/week4.html)
+[Week 5](/Defense-Against-The-Dark-Arts/week5.html)
+[Week 6](/Defense-Against-The-Dark-Arts/week6.html)
+[Week 7](/Defense-Against-The-Dark-Arts/week7.html)
+[Week 8](/Defense-Against-The-Dark-Arts/week8.html))
+[Week 9](/Defense-Against-The-Dark-Arts/week9.html)
 
 #### Created by: Dylan Drudge using GithubPages and Jekyll
