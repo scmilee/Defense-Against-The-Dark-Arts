@@ -20,4 +20,4 @@
 
 [Week 9](/Defense-Against-The-Dark-Arts/week9.html)
 
-#### Created by: Dylan Drudge using GithubPages and Jekyll
+
