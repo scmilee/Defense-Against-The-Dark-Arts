@@ -26,6 +26,7 @@ so an example using the Zues virus family on the Macos platform would be :
 The dynamic duo of Flypaper and Process Explorer/Anti Spy was really highlighted by the lab this week. Where evil.exe would normally exit itself quickly, flypaper prevents it from doing so, allowing us to get an in depth analysis of the programs activites.
 
 ## Fun Facts Learned
-
-
-## Conclusions
+- The first instance of malware was called Brain, and was written by two Pakistani brothers. It infected the boot drive of MS-DOC.
+- Over 200 TB of malware is introduced into Mcafees systems every single day. 
+- A lot of malware focused work is open source and research is very often shared across company boundries.
+- A goat is a sacrificial machine that you run malware in to be able to view behavior that might not happen inside a VM or other containers. 
