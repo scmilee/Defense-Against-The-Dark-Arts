@@ -12,7 +12,7 @@ This week was entirely centered around Malware, from its origins to various type
 #### Naming a Sample
 Naming a new sample from either your work place or from personal endeavours tends to follow a naming convention if you want the name you give your piece of malware to stick. The convention typically follows :
 `Type/platform/Family/Variant/!information`
-so and example using the Zues virus family on the Macos platform would be :
+so an example using the Zues virus family on the Macos platform would be :
 `Virus/MacOS/Zues/.Y/!PGK`
 
 #### Tools
