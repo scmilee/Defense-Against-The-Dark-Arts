@@ -12,10 +12,12 @@ There are many reasons to hire/need a forensic investigator but the following 5 
 
 #### Types of Forensics:
 - **Live**: The suspects device is currently on whether at the scene of the crime or cryogenically frozen and brought to a lab. This device still has all of its RAM untouched (mostly) and can have a memory dump performed on it to get all volatile data off of it. This is usually best case scenario as memory dumps contain a lot of useful information like the master page table, secrets etc. 
-- **Post-mortem**: This is the less ideal situation but still can be very fruitful if you know what you're doing. This is an investigation into the main storage component of the suspects device, but in some cases can be an investigstion into perihperal devices as well(as long as they're non-volatile). 
-- **Network Based**: Potentially unwanted programs. Things like adware and spyware are classified under this term, and funnily enough a lot of the adware and spyware were just garbage AV programs due to the insane amount of permissions those programs get.
+- **Post-mortem**: This is the less ideal situation but still can be very fruitful if you know what you're doing. This is an investigation into the main storage component of the suspects device, but in some cases can be an investigstion into perihperal devices as well(as long as they're non-volatile). Given todays growing storage sizes (1TB +), there is an increasing amount of data to process in the same time-span as 10 + years ago. This has lead investigators to exploiting hashing to quickly compare contents of files against known exploitive content/IP. 
+- **Network Based**: This is often a pre-cursor to a live or post-mortem investigation and can be performed without direct access to the suspects computer. It montiors activity through firewalls, routers, ISP datalogs etc.
 
 #### Procedures:
+The main workflow of an investigation follows these three steps- evidence aquisition -> investigation and analyses -> reporting. But it's not as simple as it may seem, because not only do you have to translate a complex topic into something a layman can understand, but at the same time you must not ruin the investigation by mistake. 
+
 
 #### RFC- 3227
 
