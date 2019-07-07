@@ -39,7 +39,7 @@ The first four steps of evidence collection should/ can only be done during a li
 ![cheat sheet](images/volcheatsheet.PNG)
 - **FTK Imager**- a program with a nice GUI for the creation of disk images and memory dumps for programs like Volatility to useand analyse. It also allows the export of master file tables which is not classically allowed, especially in a windows environment.
 
-![Imager Example](images/ftkimager.png)
+![Imager Example](images/ftkimager.jpg)
 Similar to last week where there was a dyanamic trio of technology, the dynamic trio of this week was clearly Yara, Volatility and FTK. Where you could get the memory dump using FTK, analyse it using Volatility then do pattern matching checking against it using Yara to quickly identify and known suspicious behavior. 
 
 ## Fun Facts Learned
