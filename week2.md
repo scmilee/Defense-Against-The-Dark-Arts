@@ -31,13 +31,13 @@ Expanding on the procedures element above is the volatility grade of the informa
 The first four steps of evidence collection should/ can only be done during a live-investigation, while the other 4 steps can be done post mortem. 
 
 #### Tools
-- **Yara**- a Regex matcher on steroids. It is primarily used for the identification and classification of malware samples using rules created by a forensic investigator.
+- **Yara**- a Regex matcher on steroids. It is primarily used for the identification and classification of malware samples using rules created by a forensic investigator.Below is an image showing what is displayed when Yara finds a file that matches a rule set / signature.
 
 ![Yara Ouput](images/yarasig.png)
 - **Volatility**- a program that analyses memory dumps from a program like FTK imager. There are a bunch of commands to get more specific with the types of information you're looking for as well. Below is a cheat sheet sample of those commands.
 
 ![cheat sheet](images/volcheatsheet.PNG)
-- **FTK Imager**- a program with a nice GUI for the creation of disk images and memory dumps for programs like Volatility to useand analyse. It also allows the export of master file tables which is not classically allowed, especially in a windows environment.
+- **FTK Imager**- a program with a nice GUI for the creation of disk images and memory dumps for programs like Volatility to useand analyse. It also allows the export of master file tables which is not classically allowed, especially in a windows environment. Below is an image showing off FTK's awesome GUI.
 
 ![Imager Example](images/ftkimager.jpg)
 Similar to last week where there was a dyanamic trio of technology, the dynamic trio of this week was clearly Yara, Volatility and FTK. Where you could get the memory dump using FTK, analyse it using Volatility then do pattern matching checking against it using Yara to quickly identify and known suspicious behavior. 
