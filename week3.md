@@ -2,21 +2,23 @@
 
 ## Ideas
 
-This week was centered around Malware, Attack vectors for infection and how to defend against those vectors. We got to use Yara more in depth and were introduced to a new tool Cuckoo in the labs this week.
+This week was centered around Malware, Attack vectors for infection and how to defend against those vectors. We got to use Yara more in depth and were introduced to a new tool Cuckoo in the labs this week. For both defense and attack vectors, they can be broken down into four main events:
+ - First Contact
+ - Local Execution
+ - Establish Presence
+ - Malicious Activity/ Establish persistence
 
 #### Attack Vectors:
-- **Live**: The suspects device is currently on whether at the scene of the crime or cryogenically frozen and brought to a lab. This device still has all of its RAM untouched (mostly) and can have a memory dump performed on it to get all volatile data off of it. This is usually best case scenario as memory dumps contain a lot of useful information like the master file table, secrets etc. 
-- **Post-mortem**: This is the less ideal situation but still can be very fruitful if you know what you're doing. This is an investigation into the main storage component of the suspects device, but in some cases can be an investigation into perihperal devices as well(as long as they're non-volatile). Given todays growing storage sizes (1TB +), there is an increasing amount of data to process in the same time-span as 10 + years ago. This has lead investigators to exploiting hashing to quickly compare contents of files against known exploitive content/IP. 
-- **Network Based**: This is often a pre-cursor to a live or post-mortem investigation and can be performed without direct access to the suspects computer. It montiors activity through firewalls, routers, ISP datalogs etc.
+ - **First Contact**- 
+ - **Local Execution**-
+ - **Establish Presence**-
+ - **Malicious Activity/ Establish persistence**-
 
 #### Defense Against Previous Vectors:
-The main workflow of an investigation follows these three steps- evidence aquisition -> investigation and analyses -> reporting. But it's not as simple as it may seem, because not only do you have to translate a complex topic into something a layman can understand, but at the same time you must not ruin the investigation by mistake. 
-The following steps should be taken when during your investigation to help preserve the evidences integrity:
-- record the current system time to get a baseline to work off of for all other devices & times that might be used
-- take a cryptographic hash of the system right away to get a baseline signature to always refer back to.
-- make a copy of the original
-- hash the copy to make sure the two match.
-- if you do end up contaminating the system, make sure to document it.
+ - **First Contact**- 
+ - **Local Execution**- 
+ - **Establish Presence**-
+ - **Malicious Activity/ Establish persistence**- 
 
 #### Anti-Malware Characteristics
 Expanding on the procedures element above is the volatility grade of the information, and the order of which it should be collected. This order is from RFC-3227 which is a guideline for evidence collection:
@@ -25,20 +27,18 @@ Expanding on the procedures element above is the volatility grade of the informa
 The first four steps of evidence collection should/ can only be done during a live-investigation, while the other 4 steps can be done post mortem. 
 
 #### Tools
+
+- **Cuckoo**- is an open source automated malware analyses tool that oulines file behavior and charateristics. It executes files in a realistic environment/sandbox and records everything that happens including API calls and network traffic. 
+
+![cheat sheet](images/kol.jpg)
+
 - **Yara**- a Regex matcher on steroids. It is primarily used for the identification and classification of malware samples using rules created by a forensic investigator.Below is an image showing what is displayed when Yara finds a file that matches a rule set / signature.
 
 ![Yara Ouput](images/yarasig.png)
 
-- **Cuckoo**- is an open source automated malware analyses tool that oulines file behavior and charateristics. It executes files in a realistic environment and records everything that happens.
-
-![cheat sheet](images/volcheatsheet.PNG)
-- **FTK Imager**- a program with a nice GUI for the creation of disk images and memory dumps for programs like Volatility to use and analyse. It also allows the export of master file tables which is not classically allowed, especially in a windows environment. Below is an image showing off FTK's awesome GUI.
-
-![Imager Example](images/ftkimager.jpg)
-Similar to last week where there was a dyanamic duo of technology, there's a dynamic trio this week: Yara, Volatility and FTK. Where you could get the memory dump using FTK, analyse it using Volatility then do pattern matching checking against it using Yara to quickly identify and known suspicious behavior. 
+Cuckoo was definitely the star of the show this week in my opinion, so much so that I went out of my way to play with it a little bit more on my own free time. It integrates perfectly with both Yara and Volatility, which makes things like memory analyses a breeze. And in a similar fashion to Linux, it's super modular and a bit like Lego, you can make your own custom analyses sandbox with parts available on github/sourceforge etc.
 
 ## Fun Facts Learned
-- Mac times stand for modified at, accessed at, and created at.
-- Hashing of images to prevent emotional burnout in human trafficking cases, and speeds up massive analyses of forensic cases. 
-- A lot of passwords/secrets are stored in memory and can be viewed inside of a memory dump.
-- **Locards Exchange Principle**: you can't interact with a live system without having an effect on it/ leaving your digital fingerprints all over it.
+- Yara can take fairly complex logic and use things called wildcards to get around random byte/string fillers.
+- Most of the time when developing Anti-Malware systems you have to be looking for patterns across malware, because by the time you finish writing a tool for current malicious software, there's already 5 more programs to take its place. So you need to be able to anticipate what the bad actors are going to create next.
+- Windows autorun/startup program runner is absolutely massive and is a great hiding place to put some maleware to keep it persistent. 
