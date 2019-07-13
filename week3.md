@@ -35,7 +35,7 @@ Most anti-malware software has a combination of the following characteristics:
 
 - **Cuckoo**- is an open source automated malware analyses tool that oulines file behavior and charateristics. It executes files in a realistic environment/sandbox and records everything that happens including API calls and network traffic. 
 
-![cheat sheet](images/kol.jpg)
+![cheat sheet](images/cuck.png)
 
 - **Yara**- a Regex matcher on steroids. It is primarily used for the identification and classification of malware samples using rules created by a forensic investigator.Below is an image showing what is displayed when Yara finds a file that matches a rule set / signature.
 
