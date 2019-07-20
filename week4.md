@@ -7,6 +7,7 @@ This week focuses on the topic of Software Vulnerabilities and common exploits o
 
 ### Primary Hacking Paths:
  - **Software Vulnerability**- This is where both of our Labs this week live. It's exploiting a programmers logic for your own good and it can happen in a variety of ways from not sanitizing your inputs from a client to something more complex like memory corruption. Either way this is caused by human error and lack of consideration for exploitation. 
+ 
  - **Exploiting Misconfigurations**- Hacks under this category often occur because honestly life is usually a lot easier with relaxed security protocols. Things like 2 factor authentication, firewalls, encryption at rest, etc. all cause your life to move slower and from a business perspective that means less money. So more often than not you have folks skipping this type of stuff in favor of nothing, or they just simply don't configure it right so the benefit is lost anyways. 
 
 #### General Process
@@ -24,7 +25,7 @@ This was the over-arching focus of the exploits shown to us by Mr. Antoniewicz. 
 - position the shell code.
 - re-use the new object with the shell-code embedded. 
 
- The processes for replacing/positioning and reusing are extremely similar to the processes used when exploiting a stack overflow, and tools like WinDBG are extremely helpful in finding the right memory addresses.
+ The processes for replacing/positioning and reusing are extremely similar to the processes we used when exploiting a stack overflow, and tools like WinDBG are extremely helpful in finding the right memory addresses.
 
 #### Tools
 
@@ -40,7 +41,7 @@ This was the over-arching focus of the exploits shown to us by Mr. Antoniewicz. 
 
 ![Yara Ouput](images/metasploit.jpg)
 
-WinDBG is the obvious winner in terms of tools this week -regardless of my love for Metasploit- it's proved to be almost too useful in the labs to not give it the recognition it deserves. The ability to spill a programs guts outs, sift through them quickly, translate between hex and decimals in 2 words of code, it's simply awesome. 
+WinDBG is the obvious winner in terms of tools this week -regardless of my love for Metasploit- it's proved to be almost too useful in the labs to not be given the recognition it deserves. The ability to spill a programs guts outs, sift through them quickly, translate between hex and decimals in 2 words of code, it's simply awesome. 
 
 ## Fun Facts Learned
 - Most major vulnerabilities in today's world are triggered by Javascript and as a result is primarily performed through a web-browser.
