@@ -3,7 +3,7 @@
 
 ## Ideas
 
-This week focuses on the topic of Software Vulnerabilities and common exploits for them on  modern computers, this is almost the exact opposite of last weeks defense strategies. The specific exploits covered are for windows systems, although there are similar exploits for other operating systems. Our speaker Brad Antoniewicz works as a White hat hacker at Mcafee and really helped dispel a lot of the myths I had let myself believe about hacking. 
+This week focuses on the topic of Software Vulnerabilities and common exploits on  modern computers, this is almost the exact opposite of last weeks defense strategies. The specific exploits covered are for windows systems(on IE), although there are similar exploits for other operating systems. Our speaker Brad Antoniewicz works as a White hat hacker at Mcafee and really helped dispel a lot of the myths I had let myself believe about hacking. 
 
 ### Primary Hacking Paths:
  - **Software Vulnerability**- This is where both of our Labs this week live. It's exploiting a programmers logic for your own good and it can happen in a variety of ways from not sanitizing your inputs from a client to something more complex like memory corruption. Either way this is caused by human error and lack of consideration for exploitation. 
@@ -16,8 +16,14 @@ There's a general and fairly simple two step process for a hacker to have succes
 #### Memory Corruption:
 This was the over-arching focus of the exploits shown to us by Mr. Antoniewicz. Memory corruption deals with the exploitation and maniplation of system RAM to a hackers benefit and this week we got hands on experience with the methods known as buffer overflow/stack overflow and use-after-free heap manipulation. 
 
- - **Buffer Overflow**- A big way to reduce exposure to malware is to only visit reputable sites for content (ignoring the watering hole vector). But beyond just staying safe on the internet and epoxying your USB ports, you can get an anti-spam systema, educate yourself on the attack vectors and filter out any scripts from sites.
- - **Use After Free**- First and foremost, get a anti-virus/anti-malware scanner or IPS on your computer! Another good defense for local execution is 2 factor authentication. 
+ **Buffer/Stack Overflow**- This method exploits the stack and its properties when an overflown value is written to it. If a user submits a string to a program that takes a buffer but that program doesn't check the size of the passed in string, you'll get what's called buffer overflow. And since that string is usually a parameter to a function, it's on the stack and starts over-flowing to other members of the stack namely the EIP (which houses the address of the next instruction to execute). Using this a hacker can determine the postition of the EIP register using a non-repeating string and then redirect the EIP to some shell code of their choosing, and finally find an instruction in the program that contains a ffe4 code, splice the address to being with ffe4 then the system will run the instruction during freefall. 
+
+ **Use After Free**-  This method focuses on using the heap instead of the stack like the stack overflow exploit. It's also much simpler in terms of trying to understand the steps since there's only 4 :
+- free the object.
+- replace the object.
+- position the shell code.
+- re-use the new object with the shell-code embedded. 
+ 
 
 #### Tools
 
