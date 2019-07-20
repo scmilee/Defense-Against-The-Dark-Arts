@@ -5,16 +5,16 @@
 
 This week focuses on the topic of Software Vulnerabilities and common exploits for them on  modern computers, this is almost the exact opposite of last weeks defense strategies. The specific exploits covered are for windows systems, although there are similar exploits for other operating systems. Our speaker Brad Antoniewicz works as a White hat hacker at Mcafee and really helped dispel a lot of the myths I had let myself believe about hacking. 
 
-#### Primary Hacking Paths:
+### Primary Hacking Paths:
  - **Software Vulnerability**- This is where both of our Labs this week live. It's exploiting a programmers logic for your own good and it can happen in a variety of ways from not sanitizing your inputs from a client to something more complex like memory corruption. Either way this is caused by human error and lack of consideration for exploitation. 
  - **Exploiting Misconfigurations**- Hacks under this category often occur because honestly life is usually a lot easier with relaxed security protocols. Things like 2 factor authentication, firewalls, encryption at rest, etc. all cause your life to move slower and from a business perspective that means less money. So more often than not you have folks skipping this type of stuff in favor of nothing, or they just simply don't configure it right so the benefit is lost anyways. 
 
-### General Process
+#### General Process
 
-
+There's a general and fairly simple two step process for a hacker to have successfully "hacked" your device. The first is simple, it's to trigger a vulnerability which could be overflowing a buffer, tampering with uniitialized memory, abusing faulty authentication, etc. Once the hacker has triggered the vulnerability and the process is in a state of freefall and or panic, the goal of the hacker is to try and control that freefall and introduce a payload(shell code primarily) at the same time.
 
 #### Memory Corruption:
-The biggest issue with defending the general public against known malware attack vectors is knowledge and understanding. If everyone were to have an IPS, awesome Firewall, 2-factor auth, HIPS etc then there would be a drastic drop in infections. But that's not the case, so instead we're stuck with Malware being a big deal.
+This was the over-arching focus of the exploits shown to us by Mr. Antoniewicz. Memory corruption deals with the exploitation and maniplation of system RAM to a hackers benefit and this week we got hands on experience with the methods known as buffer overflow/stack overflow and use-after-free heap manipulation. 
 
  - **Buffer Overflow**- A big way to reduce exposure to malware is to only visit reputable sites for content (ignoring the watering hole vector). But beyond just staying safe on the internet and epoxying your USB ports, you can get an anti-spam systema, educate yourself on the attack vectors and filter out any scripts from sites.
  - **Use After Free**- First and foremost, get a anti-virus/anti-malware scanner or IPS on your computer! Another good defense for local execution is 2 factor authentication. 
