@@ -27,11 +27,11 @@ The biggest issue with defending the general public against known malware attack
 
 - **FS exploit me**- a Regex matcher on steroids. It is primarily used for the identification and classification of malware samples using rules created by a forensic investigator.Below is an image showing what is displayed when Yara finds a file that matches a rule set / signature.
 
-![Yara Ouput](images/fseploit.png)
+![Yara Ouput](images/fseploit.jpg)
 
 - **Metasploit**- a Regex matcher on steroids. It is primarily used for the identification and classification of malware samples using rules created by a forensic investigator.Below is an image showing what is displayed when Yara finds a file that matches a rule set / signature.
 
-![Yara Ouput](images/metasploit.png)
+![Yara Ouput](images/metasploit.jpg)
 
 Cuckoo was definitely the star of the show this week in my opinion, so much so that I went out of my way to play with it a little bit more on my own free time. It integrates perfectly with both Yara and Volatility, which makes things like memory analysis a breeze. And in a similar fashion to Linux, it's super modular and a bit like Lego, you can make your own custom analyses sandbox with parts available on github/sourceforge etc.
 
