@@ -23,23 +23,24 @@ This was the over-arching focus of the exploits shown to us by Mr. Antoniewicz. 
 - replace the object.
 - position the shell code.
 - re-use the new object with the shell-code embedded. 
- 
+
+ The processes for replacing/positioning and reusing are extremely similar to the processes used when exploiting a stack overflow, and tools like WinDBG are extremely helpful in finding the right memory addresses.
 
 #### Tools
 
-- **WinDBG/WinBAG**- is an open source automated malware analyses tool that oulines file behavior and charateristics. It executes files in a realistic environment/sandbox and records everything that happens including API calls and network traffic. 
+- **WinDBG/WinBAG**- Windows debugger is software developed by microsoft for the debugging of programs on their platform. It's main features include the ability to halt programs and take register dumps, providing assembly code for program instructions, allowing users to place breakpoints at instruction addresses and even look at modules being loaded into the program on start. The only downside to the program is the horrendous UI, but what can I say, it's from Microsoft.
 
 ![cheat sheet](images/winbdg.png)
 
-- **FS exploit me**- a Regex matcher on steroids. It is primarily used for the identification and classification of malware samples using rules created by a forensic investigator.Below is an image showing what is displayed when Yara finds a file that matches a rule set / signature.
+- **FS exploit me**- this is a opensource website running a vulnerable instance of ActiveX Control, and is a learning aid for exploiting Windows primarily in the web browser environment. This was the primary focus of our labs and was created by Brad Antoniewicz himself.
 
 ![Yara Ouput](images/fseploit.jpg)
 
-- **Metasploit**- a Regex matcher on steroids. It is primarily used for the identification and classification of malware samples using rules created by a forensic investigator.Below is an image showing what is displayed when Yara finds a file that matches a rule set / signature.
+- **Metasploit**- Metasploit is a truly massive open-source project developed primarily by Rapid-7 to share common exploits, hacking vectors, IDS signatures and so much more. I had a network security class before this one where we'd run an instance of Metasploitable in Kali-linux and just go to town on it.
 
 ![Yara Ouput](images/metasploit.jpg)
 
-Cuckoo was definitely the star of the show this week in my opinion, so much so that I went out of my way to play with it a little bit more on my own free time. It integrates perfectly with both Yara and Volatility, which makes things like memory analysis a breeze. And in a similar fashion to Linux, it's super modular and a bit like Lego, you can make your own custom analyses sandbox with parts available on github/sourceforge etc.
+WinDBG is the obvious winner in terms of tools this week -regardless of my love for Metasploit- it's proved to be almost too useful in the labs to not give it the recognition it deserves. The ability to spill a programs guts outs, sift through them quickly, translate between hex and decimals in 2 words of code, it's simply awesome. 
 
 ## Fun Facts Learned
 - Most major vulnerabilities in today's world are triggered by Javascript and as a result is primarily performed through a web-browser.
