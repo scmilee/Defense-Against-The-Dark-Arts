@@ -7,7 +7,7 @@ This week focused on the inner working of windows from boot processes to 32 bit 
 
 #### Review:
 - **Processes/Threads**- a process is a running piece of software, and a thread is the smallest piece of execution for a process. Threads from the same parent process all share the same virtual address parents, but processes do not. Processes are shceduled to run by the cpu through a variety of different methods from round-robin scheduling to lottery-scheduling.
-- **User/Kernel Memory**- User memory is available to processes running in user space, and in turn is very restricted in what it can do in terms of execution, reading other memory etc. On the other hand is kernel memory has access to all of the devices memory and hardware, making it quite a big deal if it's every compromised.
+- **User/Kernel Memory**- User memory is available to processes running in user space, and in turn is very restricted in what it can do in terms of execution, reading other memory etc. On the other hand kernel memory has access to all of the devices memory and hardware, making it quite a big deal if it's every compromised.
 - **Hooking**- is at its very core, just intercepting or "hooking" into function calls, module loading,sys-calls, hardware events(keystrokes, mouse movements) etc.
 
 
@@ -21,7 +21,7 @@ This week focused on the inner working of windows from boot processes to 32 bit 
 
 #### Rootkit Types
 - **User-mode rootkit**: The easiest to detect of all the rootkits, but still menacing. A usermode rootkit has admin privileges granting it the ability to hide processes, files, ports etc. But since it does not have kernel access it is much more likely to be detected by a hypervisor layer of security.
-- **Kernel-mode rootkit**: Kernel mode rootkits are exactly like their user mode counterparts, except they have access to the kernel and int turn are far more difficult to detect. 
+- **Kernel-mode rootkit**: Kernel mode rootkits are exactly like their user mode counterparts, except they have access to the kernel and in turn are far more difficult to detect. 
 - **Hybrid rootkit**: A hybrid rootkit, is simply a blend between a kernel rootkit and a user rootkit and is the most common type of rootkit for malicious activity.
 - **Firmware rootkit**: As with the other three, the name really gives away what the rootkit does/ where it lives. A firmware rootkit plants itself inside of firmware, so that on system restart it will always be there. And like the kernel mode rootkit, its very difficult to detect unless using secure boot.
 
