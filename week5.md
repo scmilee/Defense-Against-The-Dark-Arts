@@ -1,14 +1,14 @@
 
-# Week 4- Software Vulnerabilities & Common Exploits
+# Week 5- Windows Interals & Kernal Debugging
 
 ## Ideas
 
-This week focuses on the topic of Software Vulnerabilities and common exploits on  modern computers, this is almost the exact opposite of last weeks defense strategies. The specific exploits covered are for windows systems(on IE), although there are similar exploits for other operating systems. Our speaker Brad Antoniewicz works as a White hat hacker at Mcafee and really helped dispel a lot of the myths I had let myself believe about hacking. 
+This week focused on the inner working of windows from boot processes to 32 bit virtual memory layout. When discussing this topic, it's almost impossible not to bring up rootkits and bootkits, so that's what our guest speaker Aditya Kapoor did. Additonally there was a lot of review regarding Kernal/User memory, process scheduling and Hooking that will be covered briefly. 
 
-### Primary Hacking Paths:
- - **Software Vulnerability**- This is where both of our Labs this week live. It's exploiting a programmers logic for your own good and it can happen in a variety of ways from not sanitizing your inputs from a client to something more complex like memory corruption. Either way this is caused by human error and lack of consideration for exploitation. 
+### Malicious Kits:
+**RootKits**- This is where both of our Labs this week live. It's exploiting a programmers logic for your own good and it can happen in a variety of ways from not sanitizing your inputs from a client to something more complex like memory corruption. Either way this is caused by human error and lack of consideration for exploitation. 
  
- - **Exploiting Misconfigurations**- Hacks under this category often occur because honestly life is usually a lot easier with relaxed security protocols. Things like 2 factor authentication, firewalls, encryption at rest, etc. all cause your life to move slower and from a business perspective that means less money. So more often than not you have folks skipping this type of stuff in favor of nothing, or they just simply don't configure it right so the benefit is lost anyways. 
+**BootKits**- Hacks under this category often occur because honestly life is usually a lot easier with relaxed security protocols. Things like 2 factor authentication, firewalls, encryption at rest, etc. all cause your life to move slower and from a business perspective that means less money. So more often than not you have folks skipping this type of stuff in favor of nothing, or they just simply don't configure it right so the benefit is lost anyways. 
 
 #### General Process
 
@@ -29,21 +29,17 @@ This was the over-arching focus of the exploits shown to us by Mr. Antoniewicz. 
 
 #### Tools
 
-- **WinDBG/WinBAG**- Windows debugger is software developed by microsoft for the debugging of programs on their platform. It's main features include the ability to halt programs and take register dumps, providing assembly code for program instructions, allowing users to place breakpoints at instruction addresses and even look at modules being loaded into the program on start. The only downside to the program is the horrendous UI, but what can I say, it's from Microsoft.
-
-![cheat sheet](images/winbdg.png)
-
 - **FS exploit me**- this is a opensource website running a vulnerable instance of ActiveX Control, and is a learning aid for exploiting Windows primarily in the web browser environment. This was the primary focus of our labs and was created by Brad Antoniewicz himself.
 
 ![Yara Ouput](images/fseploit.jpg)
 
-- **Metasploit**- Metasploit is a truly massive open-source project developed primarily by Rapid-7 to share common exploits, hacking vectors, IDS signatures and so much more. I had a network security class before this one where we'd run an instance of Metasploitable in Kali-linux and just go to town on it.
+- **WinDBG/WinBAG**- Windows debugger is software developed by microsoft for the debugging of programs on their platform. It's main features include the ability to halt programs and take register dumps, providing assembly code for program instructions, allowing users to place breakpoints at instruction addresses and even look at modules being loaded into the program on start. The only downside to the program is the horrendous UI, but what can I say, it's from Microsoft.
 
-![Yara Ouput](images/metasploit.jpg)
+![cheat sheet](images/winbdg.png)
 
 WinDBG is the obvious winner in terms of tools this week -regardless of my love for Metasploit- it's proved to be almost too useful in the labs to not be given the recognition it deserves. The ability to spill a programs guts outs, sift through them quickly, translate between hex and decimals in 2 words of code, it's simply awesome. 
 
 ## Fun Facts Learned
-- Most major vulnerabilities in today's world are triggered by Javascript and as a result is primarily performed through a web-browser.
-- The vulnerability/exploits of today are vastly different(yet strikingly similar) from those years ago. Where in the past perimeter attacks were more common, nowadays companies have their perimeters guarded quite strongly, so bad actors are forced to resort to a honey-pot type strategy.
-- EAX register in windows operating systems hold the return values of a function call. 
+- Windows virtual memory on 32 bit systems is 4GB.
+- HackerDefender is the father of all modern day user-mode rootkits because it's the first one.
+- 10% of all current malware use rootkits 
