@@ -6,7 +6,7 @@
 This week focused on the inner working of windows from boot processes to 32 bit virtual memory layout. When discussing this topic, it's almost impossible not to bring up rootkits and bootkits, so that's what our guest speaker Aditya Kapoor did. Additonally there was a lot of review regarding Kernal/User memory, process scheduling and Hooking that will be covered briefly. 
 
 #### Review:
-- **Processes/Threads**- a process is a running piece of software, and a thread is the smallest piece of execution for a process. Threads from the same parent process all share the same virtual address parents, but processes do not.
+- **Processes/Threads**- a process is a running piece of software, and a thread is the smallest piece of execution for a process. Threads from the same parent process all share the same virtual address parents, but processes do not. Processes are shceduled to run by the cpu through a variety of different methods from round-robin scheduling to lottery-scheduling.
 - **User/Kernel Memory**- User memory is available to processes running in user space, and in turn is very restricted in what it can do in terms of execution, reading other memory etc. On the other hand is kernel memory has access to all of the devices memory and hardware, making it quite a big deal if it's every compromised.
 - **Hooking**- is at its very core, just intercepting or "hooking" into function calls, module loading,sys-calls, hardware events(keystrokes, mouse movements) etc.
 
@@ -31,11 +31,15 @@ This week focused on the inner working of windows from boot processes to 32 bit 
 
 ![Yara Ouput](images/phack.png)
 
+- **Tuluka**- 
+
+![Yara Ouput](images/tul.png)
+
 - **WinDBG/WinBAG**- Windows debugger is software developed by microsoft for the debugging of programs on their platform. It's main features include the ability to halt programs and take register dumps, providing assembly code for program instructions, allowing users to place breakpoints at instruction addresses and even look at modules being loaded into the program on start. The only downside to the program is the horrendous UI, but what can I say, it's from Microsoft.
 
 ![cheat sheet](images/winbdg.png)
 
-WinDBG is the obvious winner in terms of tools this week -regardless of my love for Metasploit- it's proved to be almost too useful in the labs to not be given the recognition it deserves. The ability to spill a programs guts outs, sift through them quickly, translate between hex and decimals in 2 words of code, it's simply awesome. 
+Although WinDBG was incredibly useful in the labs this week, Process Hacker was even more so. The ability to step inside of a processes virtual memory and see all of the addresses, permissions etc. proved to be invaluable. 
 
 ## Fun Facts Learned
 - Windows virtual memory on 32 bit systems is 4GB.
