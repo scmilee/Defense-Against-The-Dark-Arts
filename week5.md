@@ -14,18 +14,11 @@ This week focused on the inner working of windows from boot processes to 32 bit 
 
 There's a general and fairly simple two step process for a hacker to have successfully "hacked" your device. The first is simple, it's to trigger a vulnerability which could be overflowing a buffer, tampering with uniitialized memory, abusing faulty authentication, etc. Once the hacker has triggered the vulnerability and the process is in a state of freefall and or panic, the goal of the hacker is to try and control that freefall and introduce a payload(shell code primarily) at the same time.
 
-#### Memory Corruption:
-This was the over-arching focus of the exploits shown to us by Mr. Antoniewicz. Memory corruption deals with the exploitation and maniplation of system RAM to a hackers benefit and this week we got hands on experience with the methods known as buffer overflow/stack overflow and use-after-free heap manipulation. 
+#### Review:
+- **User/Kernel Memory**- 
+- **Hooking**- 
+- **Processes/Threads**-
 
- **Buffer/Stack Overflow**- This method exploits the stack and its properties when an overflown value is written to it. If a user submits a string to a program that takes a buffer but that program doesn't check the size of the passed in string, you'll get what's called buffer overflow. And since that string is usually a parameter to a function, it's on the stack and starts over-flowing to other members of the stack namely the EIP (which houses the address of the next instruction to execute). Using this a hacker can determine the postition of the EIP register using a non-repeating string and then redirect the EIP to some shell code of their choosing, and finally find an instruction in the program that contains a ffe4 code, splice the address to being with ffe4 then the system will run the instruction during freefall. 
-
- **Use After Free**-  This method focuses on using the heap instead of the stack like the stack overflow exploit. It's also much simpler in terms of trying to understand the steps since there's only 4 :
-- free the object.
-- replace the object.
-- position the shell code.
-- re-use the new object with the shell-code embedded. 
-
- The processes for replacing/positioning and reusing are extremely similar to the processes we used when exploiting a stack overflow, and tools like WinDBG are extremely helpful in finding the right memory addresses.
 
 #### Tools
 
