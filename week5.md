@@ -20,10 +20,10 @@ This week focused on the inner working of windows from boot processes to 32 bit 
 **BootKits**- Bootkits are nearly identical in terms of functionality when compared to a rootkit, but their main difference is the fact that they add themselves to the master boot record so it can survive reboots. Once a device is infected with a bootkit it can be incredibly difficult to remove, since a bootkit has access to the kernel and boot process.
 
 #### Rootkit Types
-- User-mode rootkit: The easiest to detect of all the rootkits, but still menacing. A usermode rootkit has admin privileges granting it the ability to hide processes, files, ports etc. But since it does not have kernel access it is much more likely to be detected by a hypervisor layer of security.
-- Kernel-mode rootkit: Kernel mode rootkits are exactly like their user mode counterparts, except they have access to the kernel and int turn are far more difficult to detect. 
-- Hybrid rootkit: A hybrid rootkit, is simply a blend between a kernel rootkit and a user rootkit and is the most common type of rootkit for malicious activity.
-- firmware rootkit: As with the other three, the name really gives away what the rootkit does/ where it lives. A firmware rootkit plants itself inside of firmware, so that on system restart it will always be there. And like the kernel mode rootkit, its very difficult to detect unless using secure boot.
+- **User-mode rootkit**: The easiest to detect of all the rootkits, but still menacing. A usermode rootkit has admin privileges granting it the ability to hide processes, files, ports etc. But since it does not have kernel access it is much more likely to be detected by a hypervisor layer of security.
+- **Kernel-mode rootkit**: Kernel mode rootkits are exactly like their user mode counterparts, except they have access to the kernel and int turn are far more difficult to detect. 
+- **Hybrid rootkit**: A hybrid rootkit, is simply a blend between a kernel rootkit and a user rootkit and is the most common type of rootkit for malicious activity.
+- **Firmware rootkit**: As with the other three, the name really gives away what the rootkit does/ where it lives. A firmware rootkit plants itself inside of firmware, so that on system restart it will always be there. And like the kernel mode rootkit, its very difficult to detect unless using secure boot.
 
 #### Tools
 
