@@ -31,7 +31,7 @@ This week focused on the inner working of windows from boot processes to 32 bit 
 
 ![Yara Ouput](images/phack.png)
 
-- **Tuluka**- 
+- **Tuluka**- this is an anti rootkit tool that proved to be useful in our labs for identifying whether or not we had successfully removed the malicious file reference. 
 
 ![Yara Ouput](images/tul.png)
 
