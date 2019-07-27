@@ -5,6 +5,12 @@
 
 This week focused on the inner working of windows from boot processes to 32 bit virtual memory layout. When discussing this topic, it's almost impossible not to bring up rootkits and bootkits, so that's what our guest speaker Aditya Kapoor did. Additonally there was a lot of review regarding Kernal/User memory, process scheduling and Hooking that will be covered briefly. 
 
+#### Review:
+- **Processes/Threads**- a process is a running piece of software, and a thread is the smallest piece of execution for a process. Threads from the same parent process all share the same virtual address parents, but processes do not.
+- **User/Kernel Memory**- User memory is available to processes running in user space, and in turn is very restricted in what it can do in terms of execution, reading other memory etc. On the other hand is kernel memory has access to all of the devices memory and hardware, making it quite a big deal if it's every compromised.
+- **Hooking**- is at its very core, just intercepting or "hooking" into function calls, module loading,sys-calls, hardware events(keystrokes, mouse movements) etc.
+
+
 ### Malicious Kits:
 **RootKits**- Rootkits are pieces of malware that have the over-arching goal of conealing themselves from the users and system of the device, while also having root permissions in a system. They are most commonly found on Windows-32 Bit devices due to complications when trying to infect 64 bit systems. A rootkit infects usually through one of these three ways :
 - exploits in the kernel.
@@ -13,14 +19,11 @@ This week focused on the inner working of windows from boot processes to 32 bit 
  
 **BootKits**- Bootkits are nearly identical in terms of functionality when compared to a rootkit, but their main difference is the fact that they add themselves to the master boot record so it can survive reboots. Once a device is infected with a bootkit it can be incredibly difficult to remove, since a bootkit has access to the kernel and boot process.
 
-#### Review:
-- **User/Kernel Memory**- 
-- **Hooking**- 
-- **Processes/Threads**-
-
 #### Rootkit Types
-
-There's a general and fairly simple two step process for a hacker to have successfully "hacked" your device. The first is simple, it's to trigger a vulnerability which could be overflowing a buffer, tampering with uniitialized memory, abusing faulty authentication, etc. Once the hacker has triggered the vulnerability and the process is in a state of freefall and or panic, the goal of the hacker is to try and control that freefall and introduce a payload(shell code primarily) at the same time.
+- User-mode rootkit: The easiest to detect of all the rootkits, but still menacing. A usermode rootkit has admin privileges granting it the ability to hide processes, files, ports etc. But since it does not have kernel access it is much more likely to be detected by a hypervisor layer of security.
+- Kernel-mode rootkit: Kernel mode rootkits are exactly like their user mode counterparts, except they have access to the kernel and int turn are far more difficult to detect. 
+- Hybrid rootkit: A hybrid rootkit, is simply a blend between a kernel rootkit and a user rootkit and is the most common type of rootkit for malicious activity.
+- firmware rootkit: As with the other three, the name really gives away what the rootkit does/ where it lives. A firmware rootkit plants itself inside of firmware, so that on system restart it will always be there. And like the kernel mode rootkit, its very difficult to detect unless using secure boot.
 
 #### Tools
 
