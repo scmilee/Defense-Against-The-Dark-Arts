@@ -12,7 +12,7 @@ This week focused on the inner working of windows from boot processes to 32 bit 
 
 
 ### Malicious Kits:
-**RootKits**- Rootkits are pieces of malware that have the over-arching goal of conealing themselves from the users and system of the device, while also having root permissions in a system. They are most commonly found on Windows-32 Bit devices due to complications when trying to infect 64 bit systems. A rootkit infects usually through one of these three ways :
+**RootKits**- Rootkits are pieces of malware that have the over-arching goal of conealing themselves from the users and system of the device, while also having root permissions in a system. They are most commonly found on Windows-32 Bit devices due to complications when trying to infect 64 bit systems. A rootkit infects usually through one of these three ways:
 - exploits in the kernel.
 - bypassing or stealing valid driver signature checks.
 - adding itself to the bootpath.
