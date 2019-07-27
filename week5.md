@@ -24,7 +24,7 @@ There's a general and fairly simple two step process for a hacker to have succes
 
 #### Tools
 
-- **Process Hacker**- this is a opensource website running a vulnerable instance of ActiveX Control, and is a learning aid for exploiting Windows primarily in the web browser environment. This was the primary focus of our labs and was created by Brad Antoniewicz himself.
+- **Process Hacker**- this is a opensource tool thats incredibly similar to the windows process manager but with a few really cool extras. The main "extra" is that it lays out process virtual memory starting at 0x0h, the layout includes details like whether that page is R, RW, RX etc, and can help you identify foreign malicious code trying to hide in a process via process injection.
 
 ![Yara Ouput](images/phack.png)
 
