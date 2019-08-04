@@ -34,11 +34,11 @@ This week focused on the inner working of windows from boot processes to 32 bit 
 
 - **WinDBG/WinBAG**- Windows debugger is software developed by microsoft for the debugging of programs on their platform. It's main features include the ability to halt programs and take register dumps, providing assembly code for program instructions, allowing users to place breakpoints at instruction addresses and even look at modules being loaded into the program on start. The only downside to the program is the horrendous UI, but what can I say, it's from Microsoft.
 
-![cheat sheet](images/Week 6 - Network Security Homework DD.pdf)
+![cheat sheet](images/robust.png)
 
 Although WinDBG was incredibly useful in the labs this week, Process Hacker was even more so. The ability to step inside of a processes virtual memory and see all of the addresses, permissions etc. proved to be invaluable. 
 
-![Yara Ouput](images/Week 6 - Firewall Policy Homework Sheet DD - Policy.pdf)
+![Yara Ouput](images/firewall.png)
 ## Fun Facts Learned
 - Windows virtual memory on 32 bit systems is 4GB.
 - HackerDefender is the father of all modern day user-mode rootkits because it's the first one.
