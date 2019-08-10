@@ -28,35 +28,35 @@ User level attacks are attacks that focus not on network vulnerabilities, not on
 Users are most commonly referred to as the weakest link in any security set-up, so as a result your system is only as secure as your actions. There have been improvements to the user side of security but the human firewall is far from perfect and will likely always be a step behind the bad guys. 
 
 ### Browser Level Attacks:
-Defenses for network security come in all shapes and sizes and require varying amounts of configuration. This configuration requirement is often the greatest barrier for a company to use a piece of software. 
+Browser level attacks focus on either vulnerable application code or browser vulnerabilities themselves. But unlike user level attacks, we can technically solve all of these attacks with careful considerations when updating browsers and deploying new application code. 
 
-**MitM**- A whitelist is a list of activities and actions you expect a system to produce. This gives the defender a massive advantage because you can be incredibly granular with the traffic you let through a policy, which as a result limits the attack surface available to an attacker. A positive policy is usually implemented in one of these three systems:
-- firewalls
-- internet/web gateways
-- email gateways
-The only real downside to a whitelist is that it might detect bad actors but it cannot identify them.
+**MitM**- MitM or man in the middle attacks are attacks that intercept internet traffic and do one or more of these three activities:
+scrape : an attacker takes all of the information out of a message and uses it for other purposes. Ex: MitM scrapes your user name and password from a login.
+re-route : an attacker sends your information to a completely different host, possibly resulting in you recieving a connection with a host you did not want to have.
+alter : an attacker alters the information you have send to your destination host, as a result instead of buying one pizza you just bought 30000.
  
-**MiB**- HoneyNets are very similar to the popularized term of honey-pots. They are bait that's left out for an attacker to fall into and be trapped.The system can often use delayed response times and a maze-like network structure to try and absorb as much of the attackers time as possible. During this wasted time, other systems and sys-admins can evaluate the threat and act accordingly. Unfortunately, this system is very config-heavy and as a result, not many companies implement honeynets. 
+**MiB**- Very similar to MitM attacks, man in the browser does all of the activities mentioned above, but the "interception" takes place inside of your browser and not on another machine.
 
-**DNS Hijacking**: Intrusion prevention/detection systems are a lot like anti-virus systems in terms of evaluating threats because they use signature matching and hashes. IPS's are incredibly fast and provide information about an attack unlike a firewall. The only downside is that they can not help with zero-day attacks and that they can provide false positives. 
+**DNS Hijacking/Poisoning**: DNS cache poisoning is very similar to ARP caching, which we discussed last week. The premise behind DNS cache poisoning is to have a DNS query resolve to an entirely different site than what it regualrly resolves to. This give the attackers a chance to either get some important data, or infect the target with a download.
 
-**SQL injection**: Quarantines are remarkably similar to honeypots, except they are even more restrictive in the activities of a host. Quarantines are exceptionally useful for analyzing behavior and analyzing traffic before letting it in to your internal network. A quaratine can cause issues on a network if a good actor gets blacklisted , causing them to retry through various methods resulting in a lockout on many entry-points. 
+**SQL injection**: SQL injections are the result of lack of sanitization in application code. So if a client is trying to filter down a list of items returned by the server, instead of parsing and sanitizing their input, you just directly run their string as a query and you get what's called a SQL injection. This allows an attacker to freely query your database, depending on how your access-control is setup.
 
-
+### Tools for Browser Defense
 ## Alexa
-This is my take on the Robustness Principle and how it manages to keep up with modern day practices and teachings.
+
+Alexa is a free and open tool to use that determines a provided domains credibility, popularity and a ton of other details to help you make informed decisions on the urls safety. Below is the results returned for youtube.com.
 ![cheat sheet](images/alexa.PNG)
 
 ## IPVoid
-This is an example firewall policy document.
+In a similar fasion to Alexa, IPVoid returns IP results based off of domain and couter checks them against IP blacklists from aroundthe world. Below is the results from youtube.com.
 ![Yara Ouput](images/ipvoid.PNG)
 
 ## PhantomJS
-This is my take on the Robustness Principle and how it manages to keep up with modern day practices and teachings.
+PhantomJS is a tool used by application developers and Integration testers to run a browser in a headless state(nothing is actually rendered but everything is executed). This tool is slowly being replaced by headless chrome and other native tools, but still useful nontheless.
 ![cheat sheet](images/phatomjs.png)
 
 ## Burp-Suite
-This is an example firewall policy document.
+Burpsuite provides a host of useful tooling for diagnosing a websites security. From capturing traffic to spidering a website, burp-suite is in almost every Web-Security specialists toolbelt. 
 ![Yara Ouput](images/burp.png)
 
 ## Fun Facts Learned
