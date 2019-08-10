@@ -1,65 +1,65 @@
 
 
-# Week 6- Network Security
+# Week 7 Web Security
 
 ## Ideas
 
-This week we had the pleasure of having two guest speakers from Intel to talk to us about internet security, their names were Ram Venugopalan and Geoffry Cooper. A lot was covered this week from principles to types of threats and protection strategies to defend against them. First we'll discuss the attacks then how to defend against them, and then go over a firewall policy example.
+This week we guest speaker Cedric Cochin give us a talk about the inner workings of web security. Cedric is a former white-hat hacker, penetration tester and currently work at Mcafee as a vulnerability automation engineer. Given the massive field that is web-security there was a lot that was covered, but it can mainly be broken down into two categories, User level attacks and Browser level attacks.
 
-### Threats:
-Threats on the internet are everywhere, but we can split them into two main catagories. The first are threats that are on the internet, these threats include worms, botnets, resource theft and recon/espionage. The second catagory is threats that are from the internet, and this includes things like DDOS attacks, MitM attacks, Morris worms, Stack Overflow etc. Given the sheer magnitude of threats on/from the internet I'll be going over a few of my favorite from each sector.
+### User Level Attacks:
+User level attacks are attacks that focus not on network vulnerabilities, not on software vulnerabilities, but instead focus on the end users themselves as a means of exploitation. User level attacks use users laziness, impatience and clickability against them to launch a variety of attacks that usually all end up as a horrible experience for the user. Below is a very short list of the possible attacks a user could expect during their time on the web. 
 
-**DDOS**- traditionally known as a DOS(denial of service) attack, in modern network security a DOS attack is easy to trace and shutdown. So in order to make it a lot more difficult to trace and block, attackers came up with a Distributed Denial of Service attack that comes from many source hosts. This makes it difficult to find out who's real or not. DOS attacks are mainly focused on resource consumption resulting in loss of service to the destination host. A Few type of dos attacks are:
-- cpu
-- memory
-- storage
-- application vulnerabilities(resulting in a crash)
-- socket flooding
-- connection pool flooding
+**Phishing**- Phishing attacks, much like normal fishing, use bait to lure in potential targets, then trap them in a unfavorable scenario. Phishing uses websites and links that look like the real-deal but instead scrape user information or provide malicious downloads. 
 
-**MitM**- MitM or man in the middle attacks are attacks that intercept internet traffic and do one or more of these three activities:
-- scrape : an attacker takes all of the information out of a message and uses it for other purposes. Ex: MitM scrapes your user name and password from a login.
-- re-route : an attacker sends your information to a completely different host, possibly resulting in you recieving a connection with a host you did not want to have.
-- alter : an attacker alters the information you have send to your destination host, as a result instead of buying one pizza you just bought 30000.
+**SEO Poisoning**- SEO poisoning is heavily focused around Google Trends and aims to serve up malicious content for the newest trends on the web. Google is likely the safest place to browse but the occasional poisoning can still turn up.
+**Social Media**- Social media profiles can be incredibly dangerous due to the fact that you can't really know who you're talking to unless you've met them in person. And if you do end up adding random people from the internet, they could potentially be skimming data from your profile. Data like: 
+- projects you're working on at work
+- co-workers 
+- whiteboards
+- your schedule
+- your interests 
+- important dates to you
 
-**Arp Cache Poisoning**- usually used in a local network setting, and often in conjunction with a MitM attack, an arp cache poisoning essentially tells your computer that the attackers host is the internet gateway and you end up forwarding all of your traffic to the attacker instead of the router. This allows the attacker to do what they please with the data. 
+**Fake AV**- Fake AV or fake anti-virus are programs that mimic real  AV programs but either perform malicious activities or exploit their users by producing fake infection results leading users to paying for no real service.
 
-**Recon**- Recon can be broken into two categories, active and passive. The names give away what each does really, for active you are actively trying to find either a vulnerability to exploit or finding addresses of services to attack. Whereas with passive recon you are learning about the network by scanning ports and sifting data. 
+**Malvertising**- Malvertising as complex as it is, can be boiled down into a simple concept. Find a target -> tailor ads to fit that target -> serve those ads on their favorite sites -> perform malicous activity on the redirection. 
 
-### Defenses:
+### Defenses
+Users are most commonly referred to as the weakest link in any security set-up, so as a result your system is only as secure as your actions. There have been improvements to the user side of security but the human firewall is far from perfect and will likely always be a step behind the bad guys. 
+
+### Browser Level Attacks:
 Defenses for network security come in all shapes and sizes and require varying amounts of configuration. This configuration requirement is often the greatest barrier for a company to use a piece of software. 
 
-**Whitelisting/ Positive Policies**- A whitelist is a list of activities and actions you expect a system to produce. This gives the defender a massive advantage because you can be incredibly granular with the traffic you let through a policy, which as a result limits the attack surface available to an attacker. A positive policy is usually implemented in one of these three systems:
+**MitM**- A whitelist is a list of activities and actions you expect a system to produce. This gives the defender a massive advantage because you can be incredibly granular with the traffic you let through a policy, which as a result limits the attack surface available to an attacker. A positive policy is usually implemented in one of these three systems:
 - firewalls
 - internet/web gateways
 - email gateways
 The only real downside to a whitelist is that it might detect bad actors but it cannot identify them.
  
-**HoneyNets**- HoneyNets are very similar to the popularized term of honey-pots. They are bait that's left out for an attacker to fall into and be trapped.The system can often use delayed response times and a maze-like network structure to try and absorb as much of the attackers time as possible. During this wasted time, other systems and sys-admins can evaluate the threat and act accordingly. Unfortunately, this system is very config-heavy and as a result, not many companies implement honeynets. 
+**MiB**- HoneyNets are very similar to the popularized term of honey-pots. They are bait that's left out for an attacker to fall into and be trapped.The system can often use delayed response times and a maze-like network structure to try and absorb as much of the attackers time as possible. During this wasted time, other systems and sys-admins can evaluate the threat and act accordingly. Unfortunately, this system is very config-heavy and as a result, not many companies implement honeynets. 
 
-**IPS/IDS**: Intrusion prevention/detection systems are a lot like anti-virus systems in terms of evaluating threats because they use signature matching and hashes. IPS's are incredibly fast and provide information about an attack unlike a firewall. The only downside is that they can not help with zero-day attacks and that they can provide false positives. 
+**DNS Hijacking**: Intrusion prevention/detection systems are a lot like anti-virus systems in terms of evaluating threats because they use signature matching and hashes. IPS's are incredibly fast and provide information about an attack unlike a firewall. The only downside is that they can not help with zero-day attacks and that they can provide false positives. 
 
-**Quarantine**: Quarantines are remarkably similar to honeypots, except they are even more restrictive in the activities of a host. Quarantines are exceptionally useful for analyzing behavior and analyzing traffic before letting it in to your internal network. A quaratine can cause issues on a network if a good actor gets blacklisted , causing them to retry through various methods resulting in a lockout on many entry-points. 
+**SQL injection**: Quarantines are remarkably similar to honeypots, except they are even more restrictive in the activities of a host. Quarantines are exceptionally useful for analyzing behavior and analyzing traffic before letting it in to your internal network. A quaratine can cause issues on a network if a good actor gets blacklisted , causing them to retry through various methods resulting in a lockout on many entry-points. 
 
-**Reputation**: Last, but not least is the reputation approach. Much like it sounds, reputation is basically assigning behaviors to things like files, urls, and ip addresses. Reputation systems work best when combined with Big Data, because trends begin to appear in regards to malicious IP's when you analyze threats at scale. Things like zero-day exploits and stale data can still thwart reputation systems though, so additional systems are likely required.
 
-## Robustness Analysis
+## Alexa
 This is my take on the Robustness Principle and how it manages to keep up with modern day practices and teachings.
 ![cheat sheet](images/alexa.PNG)
 
-## FireWall policy document
+## IPVoid
 This is an example firewall policy document.
 ![Yara Ouput](images/ipvoid.PNG)
 
+## PhantomJS
 This is my take on the Robustness Principle and how it manages to keep up with modern day practices and teachings.
 ![cheat sheet](images/phatomjs.png)
 
-## FireWall policy document
+## Burp-Suite
 This is an example firewall policy document.
 ![Yara Ouput](images/burp.png)
 
 ## Fun Facts Learned
-- Companies serve out/ compute reputation for various actors, IE: files, IP's, URLs.
-- Firewalls are the largest single segment of Network Security companies income becuase they can a lot in a tiny package.
-- Passive Recon often uses slow scanning to stay hidden from detection systems.
-- Big data is where the magnitude of the data becomes so big that it affects the value of the data itself. 
+- Browser based  exploits and malware do not need to be web-centric, using the browser is just a means to an end.
+- Malware authors are starting to target developers more often due to their increased exposure to end-users.
+- At the time of making our lectures, Jimmy Kimmels searches were the most dangerous (result wise).
