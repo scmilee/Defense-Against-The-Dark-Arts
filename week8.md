@@ -6,8 +6,16 @@
 
 This week covered the topic of messaging security and the common ways of identifying phishing, spam and ham messages. We had another guest speaker from Intel/Mcafee, Eric Peterson, who specializes in Email security and filtering. This week was a lot more hands on than previous weeks, and proved to be a culmination of all the skills and ideas from weeks prior.
 
-### User Level Attacks:
-User level attacks are attacks that focus not on network vulnerabilities, not on software vulnerabilities, but instead focus on the end users themselves as a means of exploitation. User level attacks use users laziness, impatience and clickability against them to launch a variety of attacks that usually all end up as a horrible experience for the user. Below is a very short list of the possible attacks a user could expect during their time on the web. 
+### Basic Concepts:
+**Spam/Ham**- 
+**Spam-Trap**- 
+**BotNet**-
+**SnowShoe-Spam**- 
+**Phishing/Spear-Phishing**- 
+**RBL**- 
+**Heuristics**- 
+**Bayesian**- 
+**Hashing**- 
 
 **Phishing**- Phishing attacks, much like normal fishing, use bait to lure in potential targets, then trap them in a unfavorable scenario. Phishing uses websites and links that look like the real-deal but instead scrape user information or provide malicious downloads. 
 
