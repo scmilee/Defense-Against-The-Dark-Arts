@@ -12,6 +12,7 @@ User level attacks are attacks that focus not on network vulnerabilities, not on
 **Phishing**- Phishing attacks, much like normal fishing, use bait to lure in potential targets, then trap them in a unfavorable scenario. Phishing uses websites and links that look like the real-deal but instead scrape user information or provide malicious downloads. 
 
 **SEO Poisoning**- SEO poisoning is heavily focused around Google Trends and aims to serve up malicious content for the newest trends on the web. Google is likely the safest place to browse but the occasional poisoning can still turn up.
+
 **Social Media**- Social media profiles can be incredibly dangerous due to the fact that you can't really know who you're talking to unless you've met them in person. And if you do end up adding random people from the internet, they could potentially be skimming data from your profile. Data like: 
 - projects you're working on at work
 - co-workers 
