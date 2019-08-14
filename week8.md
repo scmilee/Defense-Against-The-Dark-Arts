@@ -1,10 +1,10 @@
 
 
-# Week 7 Web Security
+# Week 8 Messaging Security
 
 ## Ideas
 
-This week we guest speaker Cedric Cochin give us a talk about the inner workings of web security. Cedric is a former white-hat hacker, penetration tester and currently work at Mcafee as a vulnerability automation engineer. Given the massive field that is web-security there was a lot that was covered, but it can mainly be broken down into two categories, User level attacks and Browser level attacks.
+This week covered the topic of messaging security and the common ways of identifying phishing, spam and ham messages. We had another guest speaker from Intel/Mcafee, Eric Peterson, who specializes in Email security and filtering. This week was a lot more hands on than previous weeks, and proved to be a culmination of all the skills and ideas from weeks prior.
 
 ### User Level Attacks:
 User level attacks are attacks that focus not on network vulnerabilities, not on software vulnerabilities, but instead focus on the end users themselves as a means of exploitation. User level attacks use users laziness, impatience and clickability against them to launch a variety of attacks that usually all end up as a horrible experience for the user. Below is a very short list of the possible attacks a user could expect during their time on the web. 
