@@ -63,6 +63,7 @@ Alone this data is not as useful as it could be in a Big-Data set for machine le
 ## Regex Coach
 
 Regex Coach is a windows based regex editor. It allows for a real-time visualization of your regex, as well as some de-bugging capability. If it's any consolation, I use RegExr at my work and I've found it to be really easy to use and it's online! (so cross-platform).
+
 ![cheat sheet](images/regex.jpg)
 
 ## Fun Facts Learned
