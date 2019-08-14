@@ -7,54 +7,53 @@
 This week covered the topic of messaging security and the common ways of identifying phishing, spam and ham messages. We had another guest speaker from Intel/Mcafee, Eric Peterson, who specializes in Email security and filtering. This week was a lot more hands on than previous weeks, and proved to be a culmination of all the skills and ideas from weeks prior.
 
 ### Basic Concepts:
-**Spam/Ham**- 
-**Spam-Trap**- 
-**BotNet**-
-**SnowShoe-Spam**- 
-**Phishing/Spear-Phishing**- 
-**RBL**- 
-**Heuristics**- 
-**Bayesian**- 
-**Hashing**- 
 
-**Phishing**- Phishing attacks, much like normal fishing, use bait to lure in potential targets, then trap them in a unfavorable scenario. Phishing uses websites and links that look like the real-deal but instead scrape user information or provide malicious downloads. 
+Classification of e-mail is a difficult task. The difficulty comes from the sheer amount of e-mails that are sent everyday and the similarities between spam and regular e-mail. It'd be nice if we could just decide to block anything that even has a whiff of spam to it, but end users wouldn't like their important work e-mail being junked because we thought it was spam and vis-versa. And even if your algorithm accurately identifies 99% of all e-mail, you're still incorrectly identifying 2.7 billion messages out of the global daily 270 billion est*. 
 
-**SEO Poisoning**- SEO poisoning is heavily focused around Google Trends and aims to serve up malicious content for the newest trends on the web. Google is likely the safest place to browse but the occasional poisoning can still turn up.
+**Spam/Ham**- Spam and Ham are the yin & yang of internet e-mail, the first can be simply identified as unwanted mail and the latter as "valid" e-mail.
 
-**Social Media**- Social media profiles can be incredibly dangerous due to the fact that you can't really know who you're talking to unless you've met them in person. And if you do end up adding random people from the internet, they could potentially be skimming data from your profile. Data like: 
-- projects you're working on at work
-- co-workers 
-- whiteboards
-- your schedule
-- your interests 
-- important dates to you
+**Spam-Trap**- A spam trap is either a clean(never used) domain or an old unused domain that is laid out in a publically crawlable site and waits for spam mail to be sent to it.ISP's often use users old mailboxes (after a bounce-back period) as spam-traps to update their blacklists.
 
-**Fake AV**- Fake AV or fake anti-virus are programs that mimic real  AV programs but either perform malicious activities or exploit their users by producing fake infection results leading users to paying for no real service.
+**BotNet**- A botnet is a network of computers that can be orchestrated to perform actions without the computers owner having any knowledge of it. A botnet is usually formed through malware that infects a device and lies dormant until activated(much like a sleeper agent in pop-culture).
 
-**Malvertising**- Malvertising as complex as it is, can be boiled down into a simple concept. Find a target -> tailor ads to fit that target -> serve those ads on their favorite sites -> perform malicous activity on the redirection. 
+**SnowShoe-Spam**- SnowShoe spam is a technique of spamming where either a botnet or a malicious network of computers will share a load of spamming, instead of sending massive amounts from just one IP. This technique is similar to passice-recon from week 6, where the bad-actor keeps network traffic to a minimum to avoid detection.
+
+**Phishing**- Phishing spam , much like normal fishing, use bait to lure in potential targets, then trap them in a unfavorable scenario. Phishing-spam uses emails that look like they're from valid websites and links that look like the real-deal but instead scrape user information or provide malicious downloads. 
+
+**Spear-Phishing**- Spear-phishing simply put is a more targeted version of phishing using a targets name, job title, address or any other PII that might make the e-mail more credible.
+
+**RBL**- Probably one of the more interesting terms from this whole term, a real-time blackhole list works much like a network firewall does for a home-network. And like blacklists for network security, RBLs are curated by trusted companies/entities acrossed the globe.
+
+**Heuristics**- Heuristics have been discussed before and generally are the exact same for e-mails with the main key difference being that messaging security firms use Regex to match patterns instead of Yara Signatures.
+
+**Bayesian**- Bayesian analysis of an e-mail consists of breaking every part of the e-mail down into a token, then prevalance matching those tokens against a database of known spam. An example token would be the subject of an e-mail.  
+
+**Hashing**- Similarly to identifying a piece of malware using an md5 hash, a messaging security firm might hash the entire content or the attachments of an e-mail to try match it against a databsase. 
 
 ### Defenses
-Users are most commonly referred to as the weakest link in any security set-up, so as a result your system is only as secure as your actions. There have been improvements to the user side of security but the human firewall is far from perfect and will likely always be a step behind the bad guys. 
+It's important to carefully check your e-mail for any phishy signs from strange country of origin, formatting, information provided, quality, length etc. Below is an autopsy of a Spam and Ham e-mail from our lecture.
 
-### Browser Level Attacks:
-Browser level attacks focus on either vulnerable application code or browser vulnerabilities themselves. But unlike user level attacks, we can technically solve all of these attacks with careful considerations when updating browsers and deploying new application code. 
+#### Spam
 
-**MitM**- MitM or man in the middle attacks are attacks that intercept internet traffic and do one or more of these three activities:
-scrape : an attacker takes all of the information out of a message and uses it for other purposes. Ex: MitM scrapes your user name and password from a login.
-re-route : an attacker sends your information to a completely different host, possibly resulting in you recieving a connection with a host you did not want to have.
-alter : an attacker alters the information you have send to your destination host, as a result instead of buying one pizza you just bought 30000.
- 
-**MiB**- Very similar to MitM attacks, man in the browser does all of the activities mentioned above, but the "interception" takes place inside of your browser and not on another machine.
+![cheat sheet](images/sss.PNG)
 
-**DNS Hijacking/Poisoning**: DNS cache poisoning is very similar to ARP caching, which we discussed last week. The premise behind DNS cache poisoning is to have a DNS query resolve to an entirely different site than what it regualrly resolves to. This give the attackers a chance to either get some important data, or infect the target with a download.
+- to: line is empty
+- two urls
+- sent from mobile
+- very short in length 
+- html based
+- no periods
+- russian domain
+- .php destination
+#### Ham 
 
-**SQL injection**: SQL injections are the result of lack of sanitization in application code. So if a client is trying to filter down a list of items returned by the server, instead of parsing and sanitizing their input, you just directly run their string as a query and you get what's called a SQL injection. This allows an attacker to freely query your database, depending on how your access-control is setup.
+![cheat sheet](images/ggg.PNG)
 
-### Tools for Browser Defense
-## Alexa
+### Tools
+## Regex Coach
 
 Alexa is a free and open tool to use that determines a provided domains credibility, popularity and a ton of other details to help you make informed decisions on the urls safety. Below is the results returned for youtube.com.
-![cheat sheet](images/alexa.PNG)
+![cheat sheet](images/regex.jpg)
 
 ## IPVoid
 In a similar fasion to Alexa, IPVoid returns IP results based off of domain and couter checks them against IP blacklists from aroundthe world. Below is the results from youtube.com.
