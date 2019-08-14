@@ -45,29 +45,27 @@ It's important to carefully check your e-mail for any phishy signs from strange 
 - no periods
 - russian domain
 - .php destination
+
 #### Ham 
 
 ![cheat sheet](images/ggg.PNG)
 
+- heavy formatting
+- .org domain
+- large in terms of data (a lot fo pictures)
+- embedded urls
+- clean subject header
+- unsubscribe option/button
+
+Alone this data is not as useful as it could be in a Big-Data set for machine learning or a SQL database for advanced querying. Additonally, Eric brought up the topic of star plots and the idea of visually seeing patterns acrossed various spam-messages. The key to star-plots is to keep the axes as general as possible, otherwise a strange axis like Oprah can throw imaging off.
 ### Tools
+
 ## Regex Coach
 
-Alexa is a free and open tool to use that determines a provided domains credibility, popularity and a ton of other details to help you make informed decisions on the urls safety. Below is the results returned for youtube.com.
+Regex Coach is a windows based regex editor. It allows for a real-time visualization of your regex, as well as some de-bugging capability. If it's any consolation, I use RegExr at my work and I've found it to be really easy to use and it's online! (so cross-platform).
 ![cheat sheet](images/regex.jpg)
 
-## IPVoid
-In a similar fasion to Alexa, IPVoid returns IP results based off of domain and couter checks them against IP blacklists from aroundthe world. Below is the results from youtube.com.
-![Yara Ouput](images/ipvoid.PNG)
-
-## PhantomJS
-PhantomJS is a tool used by application developers and Integration testers to run a browser in a headless state(nothing is actually rendered but everything is executed). This tool is slowly being replaced by headless chrome and other native tools, but still useful nontheless.
-![cheat sheet](images/phatomjs.png)
-
-## Burp-Suite
-Burpsuite provides a host of useful tooling for diagnosing a websites security. From capturing traffic to spidering a website, burp-suite is in almost every Web-Security specialists toolbelt. 
-![Yara Ouput](images/burp.png)
-
 ## Fun Facts Learned
-- Browser based  exploits and malware do not need to be web-centric, using the browser is just a means to an end.
-- Malware authors are starting to target developers more often due to their increased exposure to end-users.
-- At the time of making our lectures, Jimmy Kimmels searches were the most dangerous (result wise).
+- SMTP in general is really unsecure, as senders can be easily spoofed.
+- 419 is the code given to the classic Nigerian Prince scam/spam.
+- email classification is greatly improved by big-data analysis/queries/machine-learning.
