@@ -18,6 +18,6 @@
 
 [Week 8](/Defense-Against-The-Dark-Arts/week8.html)
 
-[Week 9](/Defense-Against-The-Dark-Arts/week9.html)
+[Final](/Defense-Against-The-Dark-Arts/final-writeup.html)
 
 
