@@ -17,6 +17,12 @@ After calling the inviteCode generator you get a request back from a server cont
 * initially I had used a web-based http request generator and I ran into a IP specific error that blocked me for quite some time.
 
 
+# Challenges 
+
+Despite my previous experience getting an access code, I've never really done any challenges, labs, or really anything on htb due to lack of knowledge/experience. So as a result, most of my completed challenges were ranking easy-medium and for a quick reference of what challenges I've completed I'll keep a "completion tracker" screenshot following this paragraph.
+
+![cheat sheet](images/completion.PNG)
+
 ## you_can_do_it!.txt -Crypto Challenge 10 pts
 
 ![cheat sheet](images/ycdi.PNG)
@@ -29,5 +35,3 @@ After calling the inviteCode generator you get a request back from a server cont
 
 ![cheat sheet](images/cartographer.PNG)
 
-
-![cheat sheet](images/completion.PNG)
