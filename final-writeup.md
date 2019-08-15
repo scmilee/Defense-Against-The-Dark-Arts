@@ -14,7 +14,7 @@ My first inclination was to click furiously around the page hoping to trigger a 
 
 After calling the inviteCode generator you get a request back from a server containing some base64 encoded text, once decoded the text says to send a post request to api/invite/generate. After sending a curl* request I got back my invitation code Woohoo!
 
-* initially I had use a web-based http request generator and I ran into a IP specific error that blocked me for quite some time.
+* initially I had used a web-based http request generator and I ran into a IP specific error that blocked me for quite some time.
 
 
 ## you_can_do_it!.txt -Crypto Challenge 10 pts
