@@ -8,7 +8,7 @@ When first visiting hackthebox.eu/invite you're prompted with a invite code entr
 
 ![cheat sheet](images/htb1.PNG)
 
-My first inclination was to click furiously around the page hoping to trigger a invite code generation but that didn't go to well, so I eventually moved to inspect the input form itself. Upon further investigation into the page you can see a minified js file as an import, and what do you know it has a makeInviteCode exposed.
+My first inclination was to click furiously around the page hoping to trigger a invite code generation but that didn't go to well, so I eventually moved to inspect the input form itself. Upon further investigation into the page you can see a minified js file as an import, and what do you know it has a function: `makeInviteCode` exposed.
 
 ![cheat sheet](images/htb2.PNG)
 
