@@ -25,6 +25,10 @@ Despite my previous experience getting an access code, I've never really done an
 
 ## you_can_do_it!.txt -Crypto Challenge 10 pts
 
+With free reign to do any challenges on htb, and little to no experience with it, I felt inclined to find the easiest challenge possible to get a feel for things. You Can Do It is an under the crypto subsection when opened is just a .txt file containing the characters `YHAOANUTDSYOEOIEUTTC!` and that's it. 
+
+![cheat sheet](images/ycdi1.PNG)
+
 ![cheat sheet](images/ycdi.PNG)
 
 ## forest.jpg -Steganography Challenge 40 pts
