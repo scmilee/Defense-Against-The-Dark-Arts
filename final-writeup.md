@@ -50,6 +50,7 @@ I know that Steganography is the encoding of messages in songs, images ,videos e
 ![cheat sheet](images/forest.jpg)
 
 - `IsJuS1Af0r3TbR0`
+
 This is where I was stuck for a very, very, long time. I tried submitting it as a a code, didnt work; I tried using online analysis on the forest image with that as a password, didn't work; Eventually I fell back to the forums where people were suggesting using a CLI by the name of steghide. After running steghide on the file you get the following message:
 
 ![cheat sheet](images/forest1.PNG)
