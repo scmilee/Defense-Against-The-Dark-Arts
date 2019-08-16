@@ -29,13 +29,23 @@ With free reign to do any challenges on htb, and little to no experience with it
 
 ![cheat sheet](images/ycdi1.PNG)
 
+I initially thought it was going to be a piece of cake so I busted out a pen and paper and went to work trying to decode it. After about 15 -20 minutes and countless orientations of the characters above, I gave up on the manual approach and decided to look for a tool to help me online. Both in our classes clack channel and all over the HTB forums https://www.dcode.fr is considered THE one stop shop for all things cryptographic. Once I got to the website I knew I wanted the cryptography section -> transposition cipher but I didn't know which one to pick initiall. Eventually I stumbled on the caeser box cipher with an option of brute-force, perfect. 
+
+![cheat sheet](images/ycdi2.PNG)
+
+With the decrypted message in hand I went back to hackthebox only to not read the instructions for 5 minutes and wonder why it wouldn't take my answer. Originally I was trying to submit my answer as `YOUSEETHATYOUCANDOIT`,but as you know,  it requires an htb wrapper  for your submission like so: `htb{YOUSEETHATYOUCANDOIT}` 
+
+
+#### you_can_do_it! -Proof
 ![cheat sheet](images/ycdi.PNG)
 
 ## forest.jpg -Steganography Challenge 40 pts
 
+#### forest.jpg -Proof
 ![cheat sheet](images/forest.PNG)
 
 ## Cartographer -WebPenetration Challenge 30 pts
 
+#### Cartographer -Proof
 ![cheat sheet](images/cartographer.PNG)
 
