@@ -56,6 +56,7 @@ This is where I was stuck for a very, very, long time. I tried submitting it as 
 ![cheat sheet](images/forest1.PNG)
 
 - nothinghere.txt
+
 Upon opening the contents of nothing here, I was presented with a very long and encrypted paragraph, but with a very interesting ending to it:
 
 ![cheat sheet](images/forest2.PNG)
