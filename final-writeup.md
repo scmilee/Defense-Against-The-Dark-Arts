@@ -8,7 +8,7 @@ When first visiting hackthebox.eu/invite you're prompted with a invite code entr
 
 ![cheat sheet](images/htb1.PNG)
 
-My first inclination was to click furiously around the page hoping to trigger a invite code generation but that didn't go to well, so I eventually moved to inspect the input form itself. Upon further investigation into the page you can see a minified js file as an import, and what do you know it has a function: `makeInviteCode` exposed.
+My first inclination was to click furiously around the page hoping to trigger a invite code generation but that didn't go to well, so I eventually moved to inspect the input form itself. Upon further investigation into the page you can see a minified js file as an import, and what do you know it has a function: `makeInviteCode()` exposed.
 
 ![cheat sheet](images/htb2.PNG)
 
@@ -19,13 +19,13 @@ After calling the inviteCode generator you get a request back from a server cont
 
 # Challenges 
 
-Despite my previous experience getting an access code, I've never really done any challenges, labs, or really anything on htb due to lack of knowledge/experience. So as a result, most of my completed challenges were ranking easy-medium and for a quick reference of what challenges I've completed I'll keep a "completion tracker" screenshot following this paragraph.
+Despite my previous experience getting an access code, I've never really done any challenges, labs, or really anything on HTB due to lack of knowledge/experience. So as a result, most of my completed challenges were ranking easy-medium and for a quick reference of what challenges I've completed I'll keep an up-to-date "completion tracker" screenshot following this paragraph.
 
 ![cheat sheet](images/completion.PNG)
 
 ## you_can_do_it!.txt -Crypto Challenge 10 pts
 
-With free reign to do any challenges on htb, and little to no experience with it, I felt inclined to find the easiest challenge possible to get a feel for things. You Can Do It is an under the crypto subsection when opened is just a .txt file containing the characters `YHAOANUTDSYOEOIEUTTC!` and that's it. 
+With free reign to do any challenges on HTB and little to no experience with it, I felt inclined to find the easiest challenge possible to get a feel for things. You Can Do It is an under the crypto subsection when it's opened, is just a .txt file containing the characters `YHAOANUTDSYOEOIEUTTC!` and that's it. 
 
 ![cheat sheet](images/ycdi1.PNG)
 
@@ -33,7 +33,7 @@ I initially thought it was going to be a piece of cake so I busted out a pen and
 
 ![cheat sheet](images/ycdi2.PNG)
 
-With the decrypted message in hand I went back to hackthebox only to not read the instructions for 5 minutes and wonder why it wouldn't take my answer. Originally I was trying to submit my answer as `YOUSEETHATYOUCANDOIT`,but as you know,  it requires an htb wrapper  for your submission like so: `htb{YOUSEETHATYOUCANDOIT}` 
+With the decrypted message in hand I went back to hackthebox only to not read the instructions for 5 minutes and wonder why it wouldn't take my answer. Originally I was trying to submit my answer as `YOUSEETHATYOUCANDOIT`, but as I know now, it requires an htb wrapper  for your submission like so: `htb{YOUSEETHATYOUCANDOIT}` 
 
 
 **you_can_do_it! -Proof**
@@ -41,11 +41,11 @@ With the decrypted message in hand I went back to hackthebox only to not read th
 
 ## forest.jpg -Steganography Challenge 40 pts
 
-With my first challenge out of the way I wanted to pick something foreign and weird so that I could learn even more from this class, so I picked medium-ish challenge from the stego category. When downloaded and unzipped I was presented with a picture of a forest and nothing else. 
+With my first challenge out of the way I wanted to pick something foreign and weird so that I could learn even more from this class; So I picked medium-ish challenge from the stego category. When downloaded and unzipped it, I was presented with a picture of a forest and nothing else. 
 
 ![cheat sheet](images/oforest.jpg)
 
-I know that Steganography is the encoding of messages in songs, images ,videos etc so my first train of thought was to try and see if I can find anything hidden amongst the trees. Lo and behold there are some very hard to read characters hidden in the upper left of the image. Then I used windows default photo manipulation to make the hidden text more readable, resulting in the monstrosity below :
+I know that Steganography is the encoding of messages in songs, images ,videos etc so my first instrinct was to try and see if I can find anything hidden amongst the trees. Lo and behold, there are some very hard to read characters hidden in the upper left of the image. Then I used windows default photo manipulation to make the hidden text more readable, resulting in the monstrosity below :
 
 ![cheat sheet](images/forest.jpg)
 
@@ -57,7 +57,7 @@ This is where I was stuck for a very, very, long time. I tried submitting it as 
 
 - nothinghere.txt
 
-Upon opening the contents of nothing here, I was presented with a very long and encrypted paragraph, but with a very interesting ending to it:
+Upon opening the contents of nothing here, I was presented with a very long and encrypted paragraph with a very interesting ending to it:
 
 ![cheat sheet](images/forest2.PNG)
 
