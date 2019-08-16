@@ -41,6 +41,28 @@ With the decrypted message in hand I went back to hackthebox only to not read th
 
 ## forest.jpg -Steganography Challenge 40 pts
 
+With my first challenge out of the way I wanted to pick something foreign and weird so that I could learn even more from this class, so I picked medium-ish challenge from the stego category. When downloaded and unzipped I was presented with a picture of a forest and nothing else. 
+
+![cheat sheet](images/oforest.jpg)
+
+I know that Steganography is the encoding of messages in songs, images ,videos etc so my first train of thought was to try and see if I can find anything hidden amongst the trees. Lo and behold there are some very hard to read characters hidden in the upper left of the image. Then I used windows default photo manipulation to make the hidden text more readable, resulting in the monstrosity below :
+
+![cheat sheet](images/forest.jpg)
+
+- `IsJuS1Af0r3TbR0`
+This is where I was stuck for a very, very, long time. I tried submitting it as a a code, didnt work; I tried using online analysis on the forest image with that as a password, didn't work; Eventually I fell back to the forums where people were suggesting using a CLI by the name of steghide. After running steghide on the file you get the following message:
+
+![cheat sheet](images/forest1.PNG)
+
+- nothinghere.txt
+Upon opening the contents of nothing here, I was presented with a very long and encrypted paragraph, but with a very interesting ending to it:
+
+![cheat sheet](images/forest2.PNG)
+
+The ending looks alot like the answer-code format, so I took the contents back to my trusted caeser decrypter and got a very informative pargraph about the forest as an ecosystem and the answer-code: `HTB{AmAz1nGsKilLzZBr0}`, yay!
+
+![cheat sheet](images/forest3.PNG)
+
 #### forest.jpg -Proof
 ![cheat sheet](images/forest.PNG)
 
