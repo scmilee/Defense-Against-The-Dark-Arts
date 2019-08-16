@@ -36,7 +36,7 @@ I initially thought it was going to be a piece of cake so I busted out a pen and
 With the decrypted message in hand I went back to hackthebox only to not read the instructions for 5 minutes and wonder why it wouldn't take my answer. Originally I was trying to submit my answer as `YOUSEETHATYOUCANDOIT`,but as you know,  it requires an htb wrapper  for your submission like so: `htb{YOUSEETHATYOUCANDOIT}` 
 
 
-#### you_can_do_it! -Proof
+**you_can_do_it! -Proof**
 ![cheat sheet](images/ycdi.PNG)
 
 ## forest.jpg -Steganography Challenge 40 pts
@@ -64,11 +64,11 @@ The ending looks alot like the answer-code format, so I took the contents back t
 
 ![cheat sheet](images/forest3.PNG)
 
-#### forest.jpg -Proof
+**forest.jpg -Proof**
 ![cheat sheet](images/forest.PNG)
 
 ## Cartographer -WebPenetration Challenge 30 pts
 
-#### Cartographer -Proof
+**Cartographer -Proof**
 ![cheat sheet](images/cartographer.PNG)
 
