@@ -80,19 +80,40 @@ Upon opening the contents of nothing here, I was presented with a very long and 
 
 ![cheat sheet](images/cart1.PNG)
 
-  With week7 still fresh in my mind I turned to trying to escape some SQL in the input fields, and I had no luck. I eventually fell back to the forums once more to see that some people use a tool called sqlmap( which is an automated sql-injector) so I downloaded that and tried it against my docker container and got the following output letting me know that the username was vulnerable.
-  
+  With week7 still fresh in my mind I turned to trying to escape some SQL in the input fields, and I had no luck. I eventually fell back to the forums once more to see that some people use a tool called sqlmap(an automated sql-injection/ vulnerability mapper) so I downloaded that and tried it against my docker container and got the following output letting me know that the username was vulnerable.
 
 ![cheat sheet](images/cart11.PNG)
 
+I finally got in with the input `’-` for the username and `’` for the password, success!
+
 ![cheat sheet](images/cart2.PNG)
 
+The next portion of this challenge likely took longer than the rest of the challenges combined. I was stuck on the landing page above with no idea of what to do or where to go. The only thing that stood out in the developer tools was a request to `/panel.php?info=home`. 
 
 ![cheat sheet](images/cart3.PNG)
 
-![cheat sheet](images/cart5.PNG)
+I decided to devote all of my focus on this lead mainly because it was my only one. I tried the following paths besides `home` in hopes to land on the page that would hopefully produce the answer-code.
+secret
+server
+answer 
+admin
+db
+code
+hack
+auth
+path
+box
+Hackthebox
 
+And likely a ton more that I can’t recall. Eventually I withdrew back to the forums in defeat and some people there were having a discussion about how most challenges on hackthebox tend to have a capture the flag style.
+
+I instantly flashed back to the other tab and tried a few more CTF related paths until I landed on the ONE.
+
+`/panel.php?info=flag`
+
+![cheat sheet](images/cart5.PNG)
 
 **Cartographer -Proof**
 ![cheat sheet](images/cartographer.PNG)
 
+This was by far the most enjoyable final I’ve ever taken. I’m glad we were forced into using hackthebox because not only is it fun but I got to learn a ton while using it. I will definitely continue to use it in the future.
